@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100e17">
+  <meta name="description" content="Turn your imagination into manga with MangaForge AI. Write a story and shape it into a manga storyboard.">
+  <title>MangaForge AI — Turn your imagination into manga</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="video-backdrop hidden" id="videoBackdrop" aria-hidden="true"><video id="siteBackgroundVideo" muted loop playsinline preload="metadata"></video></div>
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="#home" aria-label="MangaForge AI home"><span class="logo">漫</span><span>MangaForge <em>AI</em></span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#create" data-go="create">Create Manga</a><a href="#projects" data-go="projects">My Projects</a><a href="#gallery">Gallery</a><a href="#pricing">Pricing</a>
+      </nav>
+      <div class="navright"><button class="btn btn-quiet btn-small" id="backgroundVideoButton" type="button">Set background video</button><input id="backgroundVideoInput" type="file" accept="video/mp4,video/webm,video/ogg" hidden><button class="btn btn-quiet btn-small" id="removeBackgroundVideo" type="button" hidden>Remove video</button><button class="btn btn-quiet btn-small" id="accountButton">Guest mode</button><button class="btn btn-primary btn-small" data-go="create">Start creating <span aria-hidden="true">↗</span></button></div>
+    </div>
+  </header>
+  <main>
+    <section class="shell hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="spark">✦</span> YOUR STORY, FRAME BY FRAME</span>
+        <h1>Turn Your Imagination <span>Into Manga</span></h1>
+        <p>Write a story. Create your own manga.</p>
+        <div class="hero-cta"><button class="btn btn-primary" data-go="create">Create your manga <span aria-hidden="true">→</span></button><a class="btn btn-quiet" href="#gallery">Explore the gallery</a></div>
+        <div class="hero-foot">A friendly, creative space for your next big idea.</div>
+      </div>
+      <div class="hero-art" aria-label="Original manga-inspired character art preview">
+        <div class="art-caption">A new world is waiting</div><div class="orbit"></div>
+        <div class="art-page" aria-hidden="true"><div class="art-panel"></div><div class="art-panel"></div><div class="art-panel"></div><div class="art-panel"></div></div>
+        <div class="art-page-tag"><span class="status-dot"></span> A story in the making</div>
+      </div>
+    </section>
+    <section class="section shell" id="gallery">
+      <div class="section-head"><div><div class="kicker">Made for your imagination</div><h2>A little inspiration</h2><p class="section-sub">Original, illustrated samples to spark your next story.</p></div><button class="btn btn-quiet btn-small" id="galleryDemo">Try a sample story →</button></div>
+      <div class="gallery-grid">
+        <article class="gallery-card"><div class="gallery-cover"><span class="cover-ribbon">SAMPLE ART · DEMO</span><i class="cover-spark s1">✦</i><i class="cover-spark s2">✧</i><i class="cover-spark s3">✦</i><div class="cover-character"></div></div><div class="gallery-info"><h3>The Starbound Letter</h3><p>A quiet promise beneath a sky full of stars.</p><div class="gallery-meta"><span>Fantasy · 2 pages</span><span class="tag">ORIGINAL SAMPLE</span></div></div></article>
+        <article class="gallery-card"><div class="gallery-cover two"><span class="cover-ribbon">SAMPLE ART · DEMO</span><i class="cover-spark s1">✦</i><i class="cover-spark s2">✧</i><i class="cover-spark s3">✦</i><div class="cover-character"></div></div><div class="gallery-info"><h3>Petals After Rain</h3><p>Two friends find courage in an unexpected goodbye.</p><div class="gallery-meta"><span>Shojo · 2 pages</span><span class="tag">ORIGINAL SAMPLE</span></div></div></article>
+        <article class="gallery-card"><div class="gallery-cover three"><span class="cover-ribbon">SAMPLE ART · DEMO</span><i class="cover-spark s1">✦</i><i class="cover-spark s2">✧</i><i class="cover-spark s3">✦</i><div class="cover-character"></div></div><div class="gallery-info"><h3>Blue Hour Express</h3><p>A young courier races the last train home.</p><div class="gallery-meta"><span>Shonen · 2 pages</span><span class="tag">ORIGINAL SAMPLE</span></div></div></article>
+      </div>
+    </section>
+    <section class="section shell" id="how">
+      <div class="section-head"><div><div class="kicker">Your creative process</div><h2>From first line to final frame</h2><p class="section-sub">Shape a story into a clear storyboard, one step at a time.</p></div></div>
+      <div class="steps"><article class="step-card"><div class="step-number">01</div><h3>Tell your story</h3><p>Start with a scene, a character, or a full story. Choose your language and the manga style you love.</p></article><article class="step-card"><div class="step-number">02</div><h3>Shape the storyboard</h3><p>Turn your writing into pages and panels. Refine the scenes and dialogue before you illustrate.</p></article><article class="step-card"><div class="step-number">03</div><h3>Make it yours</h3><p>Edit, save and export your storyboard. Connect an image-generation service to create finished artwork.</p></article></div>
+    </section>
+    <section class="shell cta-strip"><div><h3>Your next favorite story starts here.</h3><p>Bring a spark of an idea. See where it takes you.</p></div><button class="btn btn-primary" data-go="create">Open the studio →</button></section>
+    <section class="section shell" id="pricing"><div class="section-head"><div><div class="kicker">Straightforward and transparent</div><h2>Plans for every storyteller</h2><p class="section-sub">Generation plans will be available when AI services are connected.</p></div></div><div class="pricing-grid"><article class="price-card"><h3>Guest</h3><div class="price">Free</div><p>Try the storyboard studio on this device.</p><button class="btn btn-quiet btn-small" data-go="create">Try guest mode</button></article><article class="price-card"><h3>Creator</h3><div class="price">Coming soon</div><p>AI artwork generation and cloud project storage.</p><button class="btn btn-quiet btn-small" data-action="pricing-info">What's planned</button></article><article class="price-card"><h3>Studio</h3><div class="price">Coming soon</div><p>More pages, shared projects, and expanded generation.</p><button class="btn btn-quiet btn-small" data-action="pricing-info">What's planned</button></article></div></section>
+    <section class="shell workspace hidden" id="create">
+      <div class="workspace-head"><div><div class="kicker">Your creative workspace</div><h1>Manga creation studio</h1><p>Draft a story, build a storyboard, and edit every panel.</p></div><div class="workspace-actions"><button class="btn btn-quiet btn-small" data-go="projects">My projects</button><button class="btn btn-primary btn-small" id="saveProjectTop">Save project</button></div></div>
+      <div class="notice"><strong>Demo mode:</strong> Storyboards and editing work in your browser. AI-generated artwork, online accounts, and cloud sync are not configured. Panel previews are labeled storyboards, not generated images.</div>
+      <div class="studio-grid">
+        <div class="card">
+          <div class="card-title"><h2>01 · Your story</h2><span class="subtle">Up to 5,000 characters</span></div>
+          <div class="field"><label for="story">What happens in your manga?</label><textarea id="story" maxlength="5000" placeholder="On the last evening of summer, a shy inventor finds a tiny star hiding inside an old music box..."></textarea><div class="char-row"><button type="button" id="exampleStory">Use an example story</button><span id="charCount">0 / 5,000</span></div></div>
+          <div class="field-row"><div class="field"><label for="storyLanguage">Story language</label><select id="storyLanguage"><option>English</option><option>Hindi</option><option>Hinglish</option></select></div><div class="field"><label for="dialogueLanguage">Dialogue language</label><select id="dialogueLanguage"><option>English</option><option>Hindi</option><option>Hinglish</option></select></div></div>
+          <div class="field-row"><div class="field"><label for="style">Manga style</label><select id="style"><option>Traditional black-and-white</option><option>Shonen action</option><option>Shojo</option><option>Chibi</option><option>Fantasy</option><option>Full Color</option></select></div><div class="field"><label for="pageCount">Pages</label><select id="pageCount"><option value="1">1 page</option><option value="2" selected>2 pages</option><option value="4">4 pages</option></select></div></div>
+          <div class="field-row"><div class="field"><label for="panelCount">Panels per page</label><select id="panelCount"><option value="3">3 panels</option><option value="4" selected>4 panels</option><option value="6">6 panels</option></select></div><div class="field"><label for="aspectRatio">Panel aspect ratio</label><select id="aspectRatio"><option>Portrait (2:3)</option><option>Square (1:1)</option><option>Landscape (3:2)</option></select></div></div>
+          <div class="field-row"><div class="field"><label for="layout">Page layout</label><select id="layout"><option>Classic grid</option><option>Dynamic action</option><option>Four-panel strip</option></select></div><div class="field"><label for="projectName">Project name</label><input id="projectName" type="text" maxlength="80" placeholder="Untitled manga"></div></div>
+          <div class="divider"></div>
+          <div class="card-title"><h3>02 · Your characters</h3><button class="btn btn-quiet btn-small" id="addCharacter">+ Add character</button></div>
+          <div class="notice">Original character collection · choose a character to add them to your story. No copyrighted anime characters or online artwork are included.</div>
+          <div class="roster-tools"><div class="field"><label for="characterSearch">Find a character</label><input id="characterSearch" type="search" placeholder="Search name or role"></div><div class="field"><label for="characterRole">Role</label><select id="characterRole"><option value="all">All roles</option><option>Adventurer</option><option>Guardian</option><option>Inventor</option><option>Scholar</option><option>Healer</option></select></div></div>
+          <div id="characterLibrary" class="roster-grid" aria-live="polite"></div>
+          <div id="characters"><div class="character-block" data-character><div class="character-head"><span>Character 1</span><button class="btn-icon remove-character" type="button" aria-label="Remove character">×</button></div><div class="field-row"><div class="field"><label>Name</label><input type="text" data-char="name" maxlength="50" placeholder="e.g. Mira"></div><div class="field"><label>Personality</label><input type="text" data-char="personality" maxlength="100" placeholder="Curious, brave..."></div></div><div class="field-row"><div class="field"><label>Hairstyle</label><input type="text" data-char="hair" maxlength="100" placeholder="Short, wavy black hair"></div><div class="field"><label>Outfit</label><input type="text" data-char="outfit" maxlength="100" placeholder="Blue jacket, red scarf"></div></div><div class="field"><label>Description</label><input type="text" data-char="description" maxlength="180" placeholder="Distinctive features, age, or other details"></div><div class="character-photo-row"><img class="character-photo-preview hidden" data-photo-preview alt="Character photo preview"><label class="character-photo-upload" for="character-photo-1"><input id="character-photo-1" data-character-photo type="file" accept="image/png,image/jpeg,image/webp">+ Add this character’s photo</label><button class="btn btn-quiet btn-small" type="button" data-remove-photo disabled>Remove</button></div><div class="field-help">Private to this browser · image is not uploaded to a server.</div></div></div>
+          <div class="field"><label class="upload" for="referenceImage"><span>Optional shared reference image <span class="field-help">Only use images you own or have permission to use · stays on this device</span></span><input id="referenceImage" type="file" accept="image/png,image/jpeg,image/webp"></label><div class="upload-note" id="uploadStatus">Each character can also have their own photo above. No image is sent to a service.</div></div>
+          <label class="control-check"><input id="rightToLeft" type="checkbox" checked> Use right-to-left manga reading order</label>
+          <div class="studio-buttons"><button class="btn btn-quiet" id="clearStory">Clear</button><button class="btn btn-primary" id="generateStoryboard">Generate manga <span aria-hidden="true">→</span></button></div>
+          <p class="small-print">This creates a text-based storyboard from your writing; it does not generate or imply AI illustrations.</p>
+        </div>
+        <div class="card" id="editor">
+          <div class="card-title"><h2>03 · Storyboard editor</h2><span id="editorStatus" class="subtle">No storyboard yet</span></div>
+          <div class="storyboard-area" id="storyboardArea"><div class="empty-state"><div class="empty-icon">▧</div><strong>Your panels will appear here</strong><p>Write a story and generate a storyboard to start editing your manga.</p></div></div>
+          <div id="editorControls" class="hidden"><div class="divider"></div><div class="editor-tools"><button class="btn btn-quiet" data-action="undo">↶ Undo</button><button class="btn btn-quiet" data-action="redo">↷ Redo</button><button class="btn btn-quiet" data-action="add-caption">+ Caption</button><button class="btn btn-quiet" data-action="add-sfx">+ Sound effect</button><button class="btn btn-quiet" data-action="add-bubble">+ Speech bubble</button></div><div class="save-row"><span id="panelSummary"></span><div class="panel-buttons"><button class="btn btn-quiet btn-small" data-action="export-png">PNG</button><button class="btn btn-quiet btn-small" data-action="export-jpg">JPG</button><button class="btn btn-quiet btn-small" data-action="export-pdf">PDF / Print</button></div></div><div class="save-row"><span>Panel artwork is a storyboard placeholder in demo mode.</span><button class="btn btn-primary btn-small" id="saveProject">Save project</button></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="shell workspace hidden" id="projects">
+      <div class="workspace-head"><div><div class="kicker">Saved on this device</div><h1>My projects</h1><p>Your guest projects stay in this browser only.</p></div><div class="workspace-actions"><button class="btn btn-quiet btn-small" data-go="create">← Back to studio</button><button class="btn btn-primary btn-small" data-go="create">New project</button></div></div>
+      <div class="notice">Local demo storage only. Projects are not uploaded, backed up, or private from other people who can use this browser profile.</div>
+      <div id="projectsList"></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><div><a class="brand" href="#home"><span class="logo">漫</span><span>MangaForge <em>AI</em></span></a><small style="display:block;margin-top:8px">Made for the stories only you can tell.</small></div><div class="footer-links"><a href="#about" data-action="footer-about">About</a><a href="#privacy" data-action="footer-privacy">Privacy policy</a><a href="mailto:hello@mangaforge.example" data-action="footer-contact">Contact</a></div><small>© 2026 MangaForge AI · Demo prototype</small></div></footer>
+  <div id="modalRoot"></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js" defer></script>
+</body>
+</html>
